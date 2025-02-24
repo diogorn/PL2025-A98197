@@ -12,6 +12,7 @@ def markdown2html(text):
     text = re.sub(r'^# (.+)$', r'<h1>\1</h1>', text, flags=re.MULTILINE)
     text = re.sub(r'^## (.+)$', r'<h2>\1</h2>', text, flags=re.MULTILINE)
     text = re.sub(r'^### (.+)$', r'<h3>\1</h3>', text, flags=re.MULTILINE)
+    # ns fazer generico, ainda.
     
     # bold
     text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', text)
@@ -21,14 +22,15 @@ def markdown2html(text):
 
     # lista numerada
     text = re.sub(r'^\d+\. (.*)$', r'<li>\1</li>', text, flags=re.MULTILINE)
-    ## faltam os oLS 
+    text = re.sub(r'(<li>.*?</li>(?:\n<li>.*?</li>)*)', r'<ol>\n\1\n</ol>', text, flags=re.DOTALL)
+    ## faltam os oLS -> done 
 
-    # links
-    text = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', text)
+    # links 
+    # falta colocar a ignorar imagens -> done
+    text = re.sub(r'(?<!\!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', text)
 
     # imagens
-    text = re.sub(r'!\[([^\]]+)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', text)
-    # imagem com erro 
+    text = re.sub(r'!\[([^\]]+)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', text) 
 
     return text
 
