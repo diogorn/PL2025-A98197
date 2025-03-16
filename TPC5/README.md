@@ -17,8 +17,9 @@ Este trabalho tem como principal objetivo implementar um analisador léxico para
 
 O analisador léxico é responsável por identificar e processar os comandos que o utilizador insere, convertendo-os em ações que modificam o estado da máquina de vendas. O stock de produtos é carregado a partir de um ficheiro JSON e pode ser modificado em tempo real, conforme as interações do utilizador.
 os tokens usados:
+```
 tokens = [
-    'CMD',   
+    'CMD', 
     'PCODE', 
     'COIN',  
     'FLOAT', 
@@ -26,6 +27,7 @@ tokens = [
     'COMMA', 
     'DOT'    
 ]
+
 Comandos: LISTAR, MOEDA, SELECIONAR, SAIR, ADICIONAR, REMOVER
 Código do produto (ex.: A23)
 Moeda no formato, por exemplo, 1e, 50c, etc.
@@ -33,6 +35,8 @@ Números com ponto decimal (para preços)
 Números inteiros (para quantidades)
 Vírgula separadora
 Ponto final (marca fim de sequência, se necessário)
+```
+
 
 #
 
@@ -42,13 +46,13 @@ Ponto final (marca fim de sequência, se necessário)
 - **Persistência**: O stock dos produtos é guardado num ficheiro JSON e atualizado conforme as ações do utilizador.
 
 ## Exemplo de Execução
-![Res](Screenshot 2025-03-16 at 17.54.46.png)
+![Res](Screenshot%202025-03-16%20at%2017.54.46.png)
 
 ## Identificação
 
 **Nome:** Diogo do Rego Neto  
 **Número:** A98197  
-**Data:** 24-02-2025
+**Data:** 16-3-2025
 
 <img src="https://github.com/user-attachments/assets/385c7dc7-ea9c-4c82-b595-82a84b63bac0" width="200">
 
