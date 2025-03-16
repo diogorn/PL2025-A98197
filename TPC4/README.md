@@ -24,15 +24,7 @@ select ?nome ?desc where {
 
 **Nome:** Diogo do Rego Neto  
 **Número:** A98197  
-**Data:** 24-02-2025
-
-<img src="https://github.com/user-attachments/assets/385c7dc7-ea9c-4c82-b595-82a84b63bac0" width="200">
-
-## Identificação
-
-**Nome:** Diogo do Rego Neto  
-**Número:** A98197  
-**Data:** 24-02-2025
+**Data:** 6-03-2025
 
 <img src="https://github.com/user-attachments/assets/385c7dc7-ea9c-4c82-b595-82a84b63bac0" width="200">
 
