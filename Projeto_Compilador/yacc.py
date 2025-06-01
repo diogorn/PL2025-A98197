@@ -382,9 +382,6 @@ def p_ForStatement(p):
     )
 
 
-# ===== NOVA HIERARQUIA DE EXPRESSÕES =====
-
-# Expression agora delega para ExprBool
 def p_Expression(p):
     '''Expression : ExprBool'''
     p[0] = p[1]
@@ -750,16 +747,6 @@ def main():
         print("*** Reading source code from stdin (terminate with EOF) ***\n")
         source_code = sys.stdin.read()
 
-    global symbol_table_stack, current_scope_level, stack_pointer
-    global local_offset, label_counter, current_function, function_table
-
-    symbol_table_stack = [{}]
-    current_scope_level = 0
-    stack_pointer = 0
-    local_offset = 0
-    label_counter = 0
-    current_function = None
-    function_table = {}
 
     result = parser.parse(source_code, debug=False)
 
